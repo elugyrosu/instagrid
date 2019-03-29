@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="ThirstySoftRegular.otf">
+            <string>ThirstySoftRegular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="instagrid" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instagrid" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nn9-Zx-rPX">
+                                <rect key="frame" x="147.66666666666666" y="30" width="118.66666666666666" height="39"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="39" id="Vc1-w1-agK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ThirstySoftRegular" family="Thirsty Soft" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Vc1-w1-agK"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="Vc1-w1-agK"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="3If-nx-aDR" userLabel="Buttons View">
+                                <rect key="frame" x="45" y="615.66666666666663" width="324" height="95.333333333333371"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="id8-IM-SNi" userLabel="Button1">
+                                        <rect key="frame" x="0.0" y="0.0" width="95.333333333333329" height="95.333333333333329"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="id8-IM-SNi" secondAttribute="height" multiplier="1:1" id="1HN-Oq-yJf"/>
+                                        </constraints>
+                                        <state key="normal" title="Button" image="Layout 1">
+                                            <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <state key="selected" image="layout1selected"/>
+                                        <connections>
+                                            <action selector="didTapButton1" destination="BYZ-38-t0r" eventType="touchUpInside" id="PjM-8S-Vph"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="1" contentMode="scaleAspectFit" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NPk-19-cdK" userLabel="Button2">
+                                        <rect key="frame" x="114.33333333333334" y="0.0" width="95.333333333333343" height="95.333333333333329"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="NPk-19-cdK" secondAttribute="height" multiplier="1:1" id="2XD-Nv-Cos"/>
+                                        </constraints>
+                                        <state key="normal" title="Button" image="Layout 2">
+                                            <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <state key="selected" image="layout2selected"/>
+                                        <connections>
+                                            <action selector="didTapButton2" destination="BYZ-38-t0r" eventType="touchUpInside" id="ahf-UZ-kY6"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="2" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yZX-hE-dJd" userLabel="Button3">
+                                        <rect key="frame" x="228.66666666666671" y="0.0" width="95.333333333333343" height="95.333333333333329"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="yZX-hE-dJd" secondAttribute="height" multiplier="1:1" id="ouz-tg-hKk"/>
+                                        </constraints>
+                                        <state key="normal" title="Button" image="Layout 3">
+                                            <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <state key="selected" image="layout3selected"/>
+                                        <connections>
+                                            <action selector="didTapButton3" destination="BYZ-38-t0r" eventType="touchUpInside" id="FS0-5C-xlk"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <variation key="heightClass=compact-widthClass=compact" axis="vertical" spacing="21"/>
+                                <variation key="heightClass=compact-widthClass=regular" axis="vertical" spacing="18"/>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="nvb-Iw-Hca" userLabel="Share">
+                                <rect key="frame" x="124.00000000000001" y="129" width="166.33333333333337" height="53"/>
+                                <subviews>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" insetsLayoutMarginsFromSafeArea="NO" image="&lt;{:linearEase;0,182,116,12,22,450,1;10,182,116,12,22,450,0;}" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vrr-ni-2sW">
+                                        <rect key="frame" x="75.666666666666657" y="0.0" width="15" height="15"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="15" id="Fsj-qw-5gf"/>
+                                            <constraint firstAttribute="width" constant="15" id="cWJ-Br-8Sj"/>
+                                        </constraints>
+                                        <variation key="heightClass=compact-widthClass=compact" image="&lt;{:linearEase;0,182,116,12,22,450,1;10,182,116,12,22,450,0;} Copy"/>
+                                        <variation key="heightClass=compact-widthClass=regular" image="&lt;{:linearEase;0,182,116,12,22,450,1;10,182,116,12,22,450,0;} Copy"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KHm-Wm-X5h">
+                                        <rect key="frame" x="0.0" y="23" width="166.33333333333334" height="30"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="Swipe up to share">
+                                                <attributes>
+                                                    <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <font key="NSFont" size="27" name="Delm-Medium"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="heightClass=compact-widthClass=compact">
+                                            <attributedString key="attributedText">
+                                                <fragment content="Swipe left to share">
+                                                    <attributes>
+                                                        <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <font key="NSFont" size="23" name="Delm-Medium"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                        </variation>
+                                        <variation key="heightClass=compact-widthClass=regular">
+                                            <attributedString key="attributedText">
+                                                <fragment content="Swipe left to share">
+                                                    <attributes>
+                                                        <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <font key="NSFont" size="25" name="Delm-Medium"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                        </variation>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Ec-bP-W5l" userLabel="Layout View" customClass="LayoutView" customModule="instagrid" customModuleProvider="target">
+                                <rect key="frame" x="36" y="197" width="342" height="342"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="O48-68-GUD">
+                                        <rect key="frame" x="15" y="15" width="312" height="312"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="czi-WH-JPx">
+                                                <rect key="frame" x="0.0" y="0.0" width="312" height="148.66666666666666"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFill" image="portraitselected" translatesAutoresizingMaskIntoConstraints="NO" id="83M-FY-VCf" userLabel="image1">
+                                                        <rect key="frame" x="0.0" y="0.0" width="148.66666666666666" height="148.66666666666666"/>
+                                                        <variation key="heightClass=compact-widthClass=compact" image="landscapeselected"/>
+                                                        <variation key="heightClass=compact-widthClass=regular" image="landscapeselected"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" tag="1" contentMode="scaleAspectFill" image="portraitselected" translatesAutoresizingMaskIntoConstraints="NO" id="X8Y-v2-Bpw" userLabel="image2">
+                                                        <rect key="frame" x="163.66666666666663" y="0.0" width="148.33333333333337" height="148.66666666666666"/>
+                                                        <variation key="heightClass=compact-widthClass=compact" image="landscapeselected"/>
+                                                        <variation key="heightClass=compact-widthClass=regular" image="landscapeselected"/>
+                                                    </imageView>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="I3K-Ka-SIb">
+                                                <rect key="frame" x="0.0" y="163.66666666666669" width="312" height="148.33333333333331"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" tag="2" contentMode="scaleAspectFill" image="portraitselected" translatesAutoresizingMaskIntoConstraints="NO" id="Z8b-hP-zlo" userLabel="image3">
+                                                        <rect key="frame" x="0.0" y="0.0" width="148.66666666666666" height="148.33333333333334"/>
+                                                        <variation key="heightClass=compact-widthClass=compact" image="landscapeselected"/>
+                                                        <variation key="heightClass=compact-widthClass=regular" image="landscapeselected"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" tag="3" contentMode="scaleAspectFill" image="portraitselected" translatesAutoresizingMaskIntoConstraints="NO" id="Nwn-IM-GgV" userLabel="image4">
+                                                        <rect key="frame" x="163.66666666666663" y="0.0" width="148.33333333333337" height="148.33333333333334"/>
+                                                        <variation key="heightClass=compact-widthClass=compact" image="landscapeselected"/>
+                                                        <variation key="heightClass=compact-widthClass=regular" image="landscapeselected"/>
+                                                    </imageView>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.10800910741090775" green="0.38947516679763794" blue="0.60925209522247314" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="O48-68-GUD" firstAttribute="top" secondItem="4Ec-bP-W5l" secondAttribute="top" constant="15" id="9FU-dK-xKW"/>
+                                    <constraint firstItem="O48-68-GUD" firstAttribute="leading" secondItem="4Ec-bP-W5l" secondAttribute="leading" constant="15" id="H2q-z1-yJP"/>
+                                    <constraint firstAttribute="bottom" secondItem="O48-68-GUD" secondAttribute="bottom" constant="15" id="XQl-Fr-hO6"/>
+                                    <constraint firstAttribute="width" secondItem="4Ec-bP-W5l" secondAttribute="height" multiplier="1:1" id="ZO8-7y-cEW"/>
+                                    <constraint firstAttribute="trailing" secondItem="O48-68-GUD" secondAttribute="trailing" constant="15" id="slT-zR-3D9"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="image2" destination="X8Y-v2-Bpw" id="RGC-yJ-B2R"/>
+                                    <outlet property="image4" destination="Nwn-IM-GgV" id="E00-er-inZ"/>
+                                </connections>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.71874731780000001" green="0.84379357099999996" blue="0.89940440649999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="nn9-Zx-rPX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1QH-6R-DcT"/>
+                            <constraint firstItem="4Ec-bP-W5l" firstAttribute="top" secondItem="nvb-Iw-Hca" secondAttribute="bottom" constant="15" id="3Al-ny-k11"/>
+                            <constraint firstItem="3If-nx-aDR" firstAttribute="top" secondItem="4Ec-bP-W5l" secondAttribute="top" id="47H-1A-3pg"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="3If-nx-aDR" secondAttribute="bottom" constant="25" id="7jp-Ms-xK9"/>
+                            <constraint firstItem="4Ec-bP-W5l" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8hZ-9a-R0U"/>
+                            <constraint firstItem="3If-nx-aDR" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="45" id="9Eb-R7-JBb"/>
+                            <constraint firstAttribute="trailing" secondItem="3If-nx-aDR" secondAttribute="trailing" constant="45" id="J4E-se-FFP"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3If-nx-aDR" secondAttribute="trailing" constant="30" id="KPN-2U-GoE"/>
+                            <constraint firstItem="4Ec-bP-W5l" firstAttribute="centerX" secondItem="nvb-Iw-Hca" secondAttribute="centerX" id="MXm-rB-ISV"/>
+                            <constraint firstItem="4Ec-bP-W5l" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="36" id="Tqo-Y3-QXT"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="4Ec-bP-W5l" secondAttribute="bottom" constant="20" id="X88-Rm-WKU"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4Ec-bP-W5l" secondAttribute="trailing" constant="36" id="ZYD-rp-NWS"/>
+                            <constraint firstItem="nvb-Iw-Hca" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="5" id="Zqn-BV-eNn"/>
+                            <constraint firstItem="4Ec-bP-W5l" firstAttribute="centerY" secondItem="nvb-Iw-Hca" secondAttribute="centerY" id="aLH-OQ-Knj"/>
+                            <constraint firstItem="nn9-Zx-rPX" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="cDC-Gn-EIL"/>
+                            <constraint firstItem="4Ec-bP-W5l" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="gdm-oU-tRM"/>
+                            <constraint firstItem="3If-nx-aDR" firstAttribute="centerY" secondItem="4Ec-bP-W5l" secondAttribute="centerY" id="kyQ-cx-hep"/>
+                            <constraint firstItem="4Ec-bP-W5l" firstAttribute="top" secondItem="nn9-Zx-rPX" secondAttribute="bottom" constant="10" id="lwe-QM-xRp"/>
+                            <constraint firstItem="4Ec-bP-W5l" firstAttribute="leading" secondItem="nvb-Iw-Hca" secondAttribute="trailing" constant="5" id="uzf-Jd-FjN"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="KPN-2U-GoE"/>
+                                <exclude reference="X88-Rm-WKU"/>
+                                <exclude reference="Zqn-BV-eNn"/>
+                                <exclude reference="8hZ-9a-R0U"/>
+                                <exclude reference="aLH-OQ-Knj"/>
+                                <exclude reference="lwe-QM-xRp"/>
+                                <exclude reference="uzf-Jd-FjN"/>
+                                <exclude reference="47H-1A-3pg"/>
+                                <exclude reference="kyQ-cx-hep"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact">
+                            <mask key="constraints">
+                                <exclude reference="7jp-Ms-xK9"/>
+                                <include reference="KPN-2U-GoE"/>
+                                <include reference="X88-Rm-WKU"/>
+                                <exclude reference="ZYD-rp-NWS"/>
+                                <include reference="Zqn-BV-eNn"/>
+                                <exclude reference="3Al-ny-k11"/>
+                                <include reference="8hZ-9a-R0U"/>
+                                <exclude reference="MXm-rB-ISV"/>
+                                <exclude reference="Tqo-Y3-QXT"/>
+                                <include reference="aLH-OQ-Knj"/>
+                                <exclude reference="gdm-oU-tRM"/>
+                                <include reference="lwe-QM-xRp"/>
+                                <include reference="uzf-Jd-FjN"/>
+                                <include reference="47H-1A-3pg"/>
+                                <exclude reference="9Eb-R7-JBb"/>
+                                <exclude reference="J4E-se-FFP"/>
+                                <include reference="kyQ-cx-hep"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="layoutView" destination="4Ec-bP-W5l" id="2AU-CX-69f"/>
+                        <outletCollection property="styleButtons" destination="id8-IM-SNi" collectionClass="NSMutableArray" id="tnM-Fe-wgA"/>
+                        <outletCollection property="styleButtons" destination="NPk-19-cdK" collectionClass="NSMutableArray" id="wxZ-Wc-tOb"/>
+                        <outletCollection property="styleButtons" destination="yZX-hE-dJd" collectionClass="NSMutableArray" id="o64-so-QfV"/>
+                        <outletCollection property="images" destination="83M-FY-VCf" collectionClass="NSMutableArray" id="TAv-jg-HqR"/>
+                        <outletCollection property="images" destination="X8Y-v2-Bpw" collectionClass="NSMutableArray" id="ORB-7s-qlK"/>
+                        <outletCollection property="images" destination="Z8b-hP-zlo" collectionClass="NSMutableArray" id="nlR-6O-dpD"/>
+                        <outletCollection property="images" destination="Nwn-IM-GgV" collectionClass="NSMutableArray" id="nxW-uA-dm9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="132.88043478260872"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="&lt;{:linearEase;0,182,116,12,22,450,1;10,182,116,12,22,450,0;}" width="30" height="20"/>
+        <image name="&lt;{:linearEase;0,182,116,12,22,450,1;10,182,116,12,22,450,0;} Copy" width="20" height="30"/>
+        <image name="Layout 1" width="160" height="160"/>
+        <image name="Layout 2" width="160" height="160"/>
+        <image name="Layout 3" width="160" height="160"/>
+        <image name="landscapeselected" width="540" height="256"/>
+        <image name="layout1selected" width="160" height="160"/>
+        <image name="layout2selected" width="160" height="160"/>
+        <image name="layout3selected" width="160" height="160"/>
+        <image name="portraitselected" width="540" height="256"/>
+    </resources>
+</document>
