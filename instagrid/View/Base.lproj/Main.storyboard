@@ -55,7 +55,7 @@
                                         </state>
                                         <state key="selected" image="layout1selected"/>
                                         <connections>
-                                            <action selector="didTapButton1" destination="BYZ-38-t0r" eventType="touchUpInside" id="PjM-8S-Vph"/>
+                                            <action selector="DidTapButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3br-4a-Qdk"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="1" contentMode="scaleAspectFit" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NPk-19-cdK" userLabel="Button2">
@@ -68,7 +68,7 @@
                                         </state>
                                         <state key="selected" image="layout2selected"/>
                                         <connections>
-                                            <action selector="didTapButton2" destination="BYZ-38-t0r" eventType="touchUpInside" id="ahf-UZ-kY6"/>
+                                            <action selector="DidTapButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wpr-kg-rR8"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="2" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yZX-hE-dJd" userLabel="Button3">
@@ -81,7 +81,7 @@
                                         </state>
                                         <state key="selected" image="layout3selected"/>
                                         <connections>
-                                            <action selector="didTapButton3" destination="BYZ-38-t0r" eventType="touchUpInside" id="FS0-5C-xlk"/>
+                                            <action selector="DidTapButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="f8B-sY-ZVZ"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -143,7 +143,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="O48-68-GUD">
                                         <rect key="frame" x="15" y="15" width="312" height="312"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="czi-WH-JPx">
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="czi-WH-JPx" userLabel="TopStackView">
                                                 <rect key="frame" x="0.0" y="0.0" width="312" height="148.66666666666666"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" contentMode="scaleAspectFill" image="portraitselected" translatesAutoresizingMaskIntoConstraints="NO" id="83M-FY-VCf" userLabel="image1">
@@ -158,16 +158,16 @@
                                                     </imageView>
                                                 </subviews>
                                             </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="I3K-Ka-SIb">
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="I3K-Ka-SIb" userLabel="BottomStackView">
                                                 <rect key="frame" x="0.0" y="163.66666666666669" width="312" height="148.33333333333331"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" tag="2" contentMode="scaleAspectFill" image="portraitselected" translatesAutoresizingMaskIntoConstraints="NO" id="Z8b-hP-zlo" userLabel="image3">
-                                                        <rect key="frame" x="0.0" y="0.0" width="148.66666666666666" height="148.33333333333334"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="312" height="148.33333333333334"/>
                                                         <variation key="heightClass=compact-widthClass=compact" image="landscapeselected"/>
                                                         <variation key="heightClass=compact-widthClass=regular" image="landscapeselected"/>
                                                     </imageView>
-                                                    <imageView clipsSubviews="YES" tag="3" contentMode="scaleAspectFill" image="portraitselected" translatesAutoresizingMaskIntoConstraints="NO" id="Nwn-IM-GgV" userLabel="image4">
-                                                        <rect key="frame" x="163.66666666666663" y="0.0" width="148.33333333333337" height="148.33333333333334"/>
+                                                    <imageView hidden="YES" clipsSubviews="YES" tag="3" contentMode="scaleAspectFill" image="portraitselected" translatesAutoresizingMaskIntoConstraints="NO" id="Nwn-IM-GgV" userLabel="image4">
+                                                        <rect key="frame" x="0.0" y="0.0" width="0.0" height="148.33333333333334"/>
                                                         <variation key="heightClass=compact-widthClass=compact" image="landscapeselected"/>
                                                         <variation key="heightClass=compact-widthClass=regular" image="landscapeselected"/>
                                                     </imageView>

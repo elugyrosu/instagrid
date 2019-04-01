@@ -9,23 +9,15 @@
 import UIKit
 
 class LayoutView: UIView {
-
-  
     
     @IBOutlet private var image2: UIImageView!
     @IBOutlet private var image4: UIImageView!
-    
-    enum Style {
-        case layout1, layout2, layout3
-    }
     
     var style: Style = .layout2 {
         didSet {
             setStyle(style)
         }
-        
     }
-    
     private func setStyle(_ style: Style){
         switch style {
             

@@ -1,5 +1,5 @@
 //
-//  Layout.swift
+//  LayoutManager.swift
 //  instagrid
 //
 //  Created by Jordan MOREAU on 27/03/2019.
@@ -8,6 +8,13 @@
 
 import Foundation
 
-struct Layout {
-    
+enum Style {
+    case layout1, layout2, layout3
 }
+    
+    
+    
+    
+    
+    
+    
