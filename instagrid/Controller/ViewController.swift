@@ -17,7 +17,6 @@ class ViewController: UIViewController {
     @IBOutlet var images: [UIImageView]!
 
     
-    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,27 +35,30 @@ class ViewController: UIViewController {
     }
     
     @objc func imageTapped(gesture: UIGestureRecognizer){
-        let imagePicked = UIImagePickerController()
-        if UIImagePickerController.isSourceTypeAvailable(.photoLibrary){
-            imagePicked.sourceType = UIImagePickerController.SourceType.photoLibrary
-            imagePicked.modalPresentationStyle = .overCurrentContext
-            present(imagePicked, animated: true, completion: nil)
-//            imagePicked.delegate = self as! UIImagePickerControllerDelegate & UINavigationControllerDelegate
+        guard let tag = gesture.view?.tag else{return}
 
-//            imagePicked.allowsEditing = false
-//            imagePicked.delegate = self
-
-
-//            imagePicked.sourceType = .photoLibrary
-//            present(imagePicked, animated: true, completion: nil)
-//            imagePickerController(picker: imagePicked, didFinishPickingImage: images[tag], tag: tag)
-
-
-        }
+        chooseImage(tag: tag)
+        
+        
     }
-    
 
-    
+    func chooseImage(tag: Int) {
+        let imagePicker = UIImagePickerController()
+        if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) == true {
+//            UIImagePickerController.availableMediaTypes(for: .photoLibrary)
+        
+            imagePicker.allowsEditing = false
+//            present(imagePicker, animated: true, completion: nil)
+//            self.present(imagePicker, animated: true, completion: {self.imagePicker.delegate = self.images[tag] as? UIImagePickerControllerDelegate & UINavigationControllerDelegate })
+//            PHPhotoLibrary.requestAuthorization { (status) in
+                imagePicker.delegate = self
+                imagePicker.sourceType = .photoLibrary
+                self.present(imagePicker, animated: true)}
+                images[tag] = imagePicker.
+        
+                
+        
+    }
 
     
     
@@ -90,3 +92,19 @@ class ViewController: UIViewController {
     
 }
 
+extension ViewController: UIImagePickerControllerDelegate,  UINavigationControllerDelegate {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]){
+        
+        if info[UIImagePickerController.InfoKey.originalImage] != nil {
+            if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
+                guard let tag2 = picker.view?.tag else {return}
+                images[tag2].image = image
+            }
+        }
+        dismiss(animated: true)
+    }
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        picker.dismiss(animated: true, completion: nil)
+    }
+}
