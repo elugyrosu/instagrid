@@ -16,14 +16,26 @@ class ViewController: UIViewController {
 
     var tag: Int?
     let myArray: [Style] = [.layout1, .layout2, .layout3]
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        addGestureRecognizer()
+        addGestureRecognizerToView()
+        addGestureRecognizerToImages()
+        shadowOnView()
     }
+//    override func willTransition(to newCollection: UITraitCollection, with coordinator: UIViewControllerTransitionCoordinator) {
+//        coordinator.animate(alongsideTransition: { context in
+//            if UIApplication.shared.statusBarOrientation.isLandscape {
+//                // activate landscape changes
+//            } else {
+//                // activate portrait changes
+//            }
+//        })
+//    }
     
-    private func addGestureRecognizer() {
+    private func addGestureRecognizerToImages() {
         images.forEach({$0.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(imageTapped(gesture:))))})
     }
     
@@ -32,8 +44,35 @@ class ViewController: UIViewController {
         self.tag = tag // self = ViewController properties
         chooseImage()
     }
+    
+    private func addGestureRecognizerToView(){
+        let swipe = UISwipeGestureRecognizer(target: self, action: #selector(swipeUpAnimation(gesture:)))
+        if UIDevice.current.orientation.isLandscape == true {
+            swipe.direction = .left
+        } else {
+            swipe.direction = .up
+        }
+        layoutView.addGestureRecognizer(swipe)
+    }
+    
+    @objc func swipeUpAnimation(gesture: UIGestureRecognizer) {
+//        let viewPosition = CGPoint(x: self.layoutView.frame.origin.x, y: self.layoutView.frame.origin.y - 600.0)
+//        layoutView.frame = CGRect(x: viewPosition.x, y: viewPosition.y, width: self.layoutView.frame.size.width, height: self.layoutView.frame.size.height)
+        UIView.animate(withDuration: 1.0, animations: transform)
+    }
+    
+    func transform(){
+        if UIDevice.current.orientation.isLandscape == true {
+            layoutView.transform = CGAffineTransform(translationX: -self.view.frame.width, y: 0)
 
-    func chooseImage() {
+        }else{
+            layoutView.transform = CGAffineTransform(translationX: 0, y: -self.view.frame.height)
+        }
+    
+    }
+ 
+
+    private func chooseImage() {
         let imagePicker = UIImagePickerController()
         if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) == true {
             imagePicker.allowsEditing = true
@@ -41,6 +80,13 @@ class ViewController: UIViewController {
             imagePicker.sourceType = .photoLibrary
             present(imagePicker, animated: true)
         }
+    }
+    private func shadowOnView(){
+        layoutView.layer.shadowColor = UIColor.black.cgColor
+        layoutView.layer.shadowOpacity = 1
+        layoutView.layer.shadowOffset = CGSize.zero
+        layoutView.layer.shadowRadius = 5
+//        layoutView.layer.shadowPath = UIBezierPath(rect: layoutView.bounds).cgPath        // fix the shadow Better for ressources, no good for rotation
     }
     
     @IBAction func DidTapButton(_ sender: UIButton) {
