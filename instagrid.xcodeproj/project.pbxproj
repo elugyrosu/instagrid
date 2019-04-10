@@ -8,10 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		FF06C8CC224C170C0068B097 /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF06C8CB224C170C0068B097 /* Style.swift */; };
+		FF8DD0FC225E5FFC00A1B216 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF8DD0FB225E5FFC00A1B216 /* Assets.xcassets */; };
 		FFC2EDD22249118000B207E8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC2EDD12249118000B207E8 /* AppDelegate.swift */; };
 		FFC2EDD42249118000B207E8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC2EDD32249118000B207E8 /* ViewController.swift */; };
 		FFC2EDD72249118000B207E8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFC2EDD52249118000B207E8 /* Main.storyboard */; };
-		FFC2EDD92249118000B207E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFC2EDD82249118000B207E8 /* Assets.xcassets */; };
 		FFC2EDDC2249118000B207E8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFC2EDDA2249118000B207E8 /* LaunchScreen.storyboard */; };
 		FFC2EDE82249269200B207E8 /* Delm-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = FFC2EDE72249269200B207E8 /* Delm-Medium.otf */; };
 		FFC2EDEA224926A200B207E8 /* ThirstySoftRegular.otf in Resources */ = {isa = PBXBuildFile; fileRef = FFC2EDE9224926A200B207E8 /* ThirstySoftRegular.otf */; };
@@ -21,11 +21,11 @@
 
 /* Begin PBXFileReference section */
 		FF06C8CB224C170C0068B097 /* Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
+		FF8DD0FB225E5FFC00A1B216 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FFC2EDCE2249118000B207E8 /* instagrid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = instagrid.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFC2EDD12249118000B207E8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FFC2EDD32249118000B207E8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FFC2EDD62249118000B207E8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		FFC2EDD82249118000B207E8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FFC2EDDB2249118000B207E8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FFC2EDDD2249118000B207E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FFC2EDE72249269200B207E8 /* Delm-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Delm-Medium.otf"; sourceTree = "<group>"; };
@@ -77,10 +77,10 @@
 		FFC2EDE3224925D100B207E8 /* Supporting files */ = {
 			isa = PBXGroup;
 			children = (
+				FF8DD0FB225E5FFC00A1B216 /* Assets.xcassets */,
 				FFC2EDE9224926A200B207E8 /* ThirstySoftRegular.otf */,
 				FFC2EDE72249269200B207E8 /* Delm-Medium.otf */,
 				FFC2EDD12249118000B207E8 /* AppDelegate.swift */,
-				FFC2EDD82249118000B207E8 /* Assets.xcassets */,
 				FFC2EDDA2249118000B207E8 /* LaunchScreen.storyboard */,
 			);
 			path = "Supporting files";
@@ -171,11 +171,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				FFC2EDDC2249118000B207E8 /* LaunchScreen.storyboard in Resources */,
-				FFC2EDD92249118000B207E8 /* Assets.xcassets in Resources */,
 				FFC2EDEA224926A200B207E8 /* ThirstySoftRegular.otf in Resources */,
 				FFC2EDE82249269200B207E8 /* Delm-Medium.otf in Resources */,
 				FFC2EDD72249118000B207E8 /* Main.storyboard in Resources */,
 				FFC2EDEC2249460000B207E8 /* Default-568h@2x.png in Resources */,
+				FF8DD0FC225E5FFC00A1B216 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

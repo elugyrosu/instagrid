@@ -23,10 +23,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instagrid" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nn9-Zx-rPX">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instagrid" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nn9-Zx-rPX" userLabel="InstagridLabel">
                                 <rect key="frame" x="148" y="54" width="118.5" height="39"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="39" id="Vc1-w1-agK"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="36" id="Vc1-w1-agK"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="ThirstySoftRegular" family="Thirsty Soft" pointSize="30"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -42,7 +42,7 @@
                                     </mask>
                                 </variation>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="3If-nx-aDR" userLabel="Buttons View">
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="3If-nx-aDR" userLabel="ButtonsStackView">
                                 <rect key="frame" x="45" y="741.5" width="324" height="95.5"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="id8-IM-SNi" userLabel="Button1">
@@ -88,19 +88,19 @@
                                 <variation key="heightClass=compact-widthClass=compact" axis="vertical" spacing="21"/>
                                 <variation key="heightClass=compact-widthClass=regular" axis="vertical" spacing="18"/>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="nvb-Iw-Hca" userLabel="Share">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="nvb-Iw-Hca" userLabel="ShareStackView">
                                 <rect key="frame" x="124" y="209" width="166.5" height="53"/>
                                 <subviews>
-                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" insetsLayoutMarginsFromSafeArea="NO" image="&lt;{:linearEase;0,182,116,12,22,450,1;10,182,116,12,22,450,0;}" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vrr-ni-2sW">
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" insetsLayoutMarginsFromSafeArea="NO" image="upArrow" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vrr-ni-2sW">
                                         <rect key="frame" x="75.5" y="0.0" width="15" height="15"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="15" id="Fsj-qw-5gf"/>
                                             <constraint firstAttribute="width" constant="15" id="cWJ-Br-8Sj"/>
                                         </constraints>
-                                        <variation key="heightClass=compact-widthClass=compact" image="&lt;{:linearEase;0,182,116,12,22,450,1;10,182,116,12,22,450,0;} Copy"/>
-                                        <variation key="heightClass=compact-widthClass=regular" image="&lt;{:linearEase;0,182,116,12,22,450,1;10,182,116,12,22,450,0;} Copy"/>
+                                        <variation key="heightClass=compact-widthClass=compact" image="leftArrow"/>
+                                        <variation key="heightClass=compact-widthClass=regular" image="leftArrow"/>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KHm-Wm-X5h">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KHm-Wm-X5h" userLabel="Share Label">
                                         <rect key="frame" x="0.0" y="23" width="166.5" height="30"/>
                                         <attributedString key="attributedText">
                                             <fragment content="Swipe up to share">
@@ -140,36 +140,36 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Ec-bP-W5l" userLabel="Layout View" customClass="LayoutView" customModule="instagrid" customModuleProvider="target">
                                 <rect key="frame" x="36" y="277" width="342" height="342"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="O48-68-GUD">
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="O48-68-GUD" userLabel="Vertical Stack View">
                                         <rect key="frame" x="15" y="15" width="312" height="312"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="czi-WH-JPx" userLabel="TopStackView">
                                                 <rect key="frame" x="0.0" y="0.0" width="312" height="148.5"/>
                                                 <subviews>
-                                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFill" image="portraitselected" translatesAutoresizingMaskIntoConstraints="NO" id="83M-FY-VCf" userLabel="image1">
+                                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFill" image="portraitCross" translatesAutoresizingMaskIntoConstraints="NO" id="83M-FY-VCf" userLabel="leftTopImageLayout">
                                                         <rect key="frame" x="0.0" y="0.0" width="148.5" height="148.5"/>
-                                                        <variation key="heightClass=compact-widthClass=compact" image="landscapeselected"/>
-                                                        <variation key="heightClass=compact-widthClass=regular" image="landscapeselected"/>
+                                                        <variation key="heightClass=compact-widthClass=compact" image="landscapeCross"/>
+                                                        <variation key="heightClass=compact-widthClass=regular" image="landscapeCross"/>
                                                     </imageView>
-                                                    <imageView clipsSubviews="YES" tag="1" contentMode="scaleAspectFill" image="portraitselected" translatesAutoresizingMaskIntoConstraints="NO" id="X8Y-v2-Bpw" userLabel="image2">
+                                                    <imageView clipsSubviews="YES" tag="1" contentMode="scaleAspectFill" image="portraitCross" translatesAutoresizingMaskIntoConstraints="NO" id="X8Y-v2-Bpw" userLabel="rightTopImageLayout">
                                                         <rect key="frame" x="163.5" y="0.0" width="148.5" height="148.5"/>
-                                                        <variation key="heightClass=compact-widthClass=compact" image="landscapeselected"/>
-                                                        <variation key="heightClass=compact-widthClass=regular" image="landscapeselected"/>
+                                                        <variation key="heightClass=compact-widthClass=compact" image="landscapeCross"/>
+                                                        <variation key="heightClass=compact-widthClass=regular" image="landscapeCross"/>
                                                     </imageView>
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="I3K-Ka-SIb" userLabel="BottomStackView">
                                                 <rect key="frame" x="0.0" y="163.5" width="312" height="148.5"/>
                                                 <subviews>
-                                                    <imageView clipsSubviews="YES" tag="2" contentMode="scaleAspectFill" image="portraitselected" translatesAutoresizingMaskIntoConstraints="NO" id="Z8b-hP-zlo" userLabel="image3">
-                                                        <rect key="frame" x="0.0" y="0.0" width="312" height="148.5"/>
-                                                        <variation key="heightClass=compact-widthClass=compact" image="landscapeselected"/>
-                                                        <variation key="heightClass=compact-widthClass=regular" image="landscapeselected"/>
+                                                    <imageView clipsSubviews="YES" tag="2" contentMode="scaleAspectFill" image="portraitCross" translatesAutoresizingMaskIntoConstraints="NO" id="Z8b-hP-zlo" userLabel="leftBottomLayoutImage">
+                                                        <rect key="frame" x="0.0" y="0.0" width="148.5" height="148.5"/>
+                                                        <variation key="heightClass=compact-widthClass=compact" image="landscapeCross"/>
+                                                        <variation key="heightClass=compact-widthClass=regular" image="landscapeCross"/>
                                                     </imageView>
-                                                    <imageView hidden="YES" clipsSubviews="YES" tag="3" contentMode="scaleAspectFill" image="portraitselected" translatesAutoresizingMaskIntoConstraints="NO" id="Nwn-IM-GgV" userLabel="image4">
-                                                        <rect key="frame" x="0.0" y="0.0" width="0.0" height="148.5"/>
-                                                        <variation key="heightClass=compact-widthClass=compact" image="landscapeselected"/>
-                                                        <variation key="heightClass=compact-widthClass=regular" image="landscapeselected"/>
+                                                    <imageView clipsSubviews="YES" tag="3" contentMode="scaleAspectFill" image="portraitCross" translatesAutoresizingMaskIntoConstraints="NO" id="Nwn-IM-GgV" userLabel="rightBottomLayoutImage">
+                                                        <rect key="frame" x="163.5" y="0.0" width="148.5" height="148.5"/>
+                                                        <variation key="heightClass=compact-widthClass=compact" image="landscapeCross"/>
+                                                        <variation key="heightClass=compact-widthClass=regular" image="landscapeCross"/>
                                                     </imageView>
                                                 </subviews>
                                             </stackView>
@@ -187,8 +187,8 @@
                                     <constraint firstAttribute="trailing" secondItem="O48-68-GUD" secondAttribute="trailing" constant="15" id="slT-zR-3D9"/>
                                 </constraints>
                                 <connections>
-                                    <outlet property="image2" destination="X8Y-v2-Bpw" id="RGC-yJ-B2R"/>
-                                    <outlet property="image4" destination="Nwn-IM-GgV" id="E00-er-inZ"/>
+                                    <outlet property="rightBottomLayoutImage" destination="Nwn-IM-GgV" id="Aib-Jy-YBX"/>
+                                    <outlet property="rightTopLayoutImage" destination="X8Y-v2-Bpw" id="eYX-Ka-TeJ"/>
                                 </connections>
                             </view>
                         </subviews>
@@ -255,10 +255,10 @@
                         <outletCollection property="styleButtons" destination="id8-IM-SNi" collectionClass="NSMutableArray" id="tnM-Fe-wgA"/>
                         <outletCollection property="styleButtons" destination="NPk-19-cdK" collectionClass="NSMutableArray" id="wxZ-Wc-tOb"/>
                         <outletCollection property="styleButtons" destination="yZX-hE-dJd" collectionClass="NSMutableArray" id="o64-so-QfV"/>
-                        <outletCollection property="images" destination="83M-FY-VCf" collectionClass="NSMutableArray" id="TAv-jg-HqR"/>
-                        <outletCollection property="images" destination="X8Y-v2-Bpw" collectionClass="NSMutableArray" id="ORB-7s-qlK"/>
-                        <outletCollection property="images" destination="Z8b-hP-zlo" collectionClass="NSMutableArray" id="nlR-6O-dpD"/>
-                        <outletCollection property="images" destination="Nwn-IM-GgV" collectionClass="NSMutableArray" id="nxW-uA-dm9"/>
+                        <outletCollection property="layoutViewImages" destination="83M-FY-VCf" collectionClass="NSMutableArray" id="KpM-qj-l1g"/>
+                        <outletCollection property="layoutViewImages" destination="X8Y-v2-Bpw" collectionClass="NSMutableArray" id="cHc-mB-8Fo"/>
+                        <outletCollection property="layoutViewImages" destination="Z8b-hP-zlo" collectionClass="NSMutableArray" id="AsB-dI-Apy"/>
+                        <outletCollection property="layoutViewImages" destination="Nwn-IM-GgV" collectionClass="NSMutableArray" id="jcb-TD-hwu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -267,15 +267,15 @@
         </scene>
     </scenes>
     <resources>
-        <image name="&lt;{:linearEase;0,182,116,12,22,450,1;10,182,116,12,22,450,0;}" width="30" height="20"/>
-        <image name="&lt;{:linearEase;0,182,116,12,22,450,1;10,182,116,12,22,450,0;} Copy" width="20" height="30"/>
         <image name="Layout 1" width="160" height="160"/>
         <image name="Layout 2" width="160" height="160"/>
         <image name="Layout 3" width="160" height="160"/>
-        <image name="landscapeselected" width="540" height="256"/>
+        <image name="landscapeCross" width="540" height="256"/>
         <image name="layout1selected" width="160" height="160"/>
         <image name="layout2selected" width="160" height="160"/>
         <image name="layout3selected" width="160" height="160"/>
-        <image name="portraitselected" width="540" height="256"/>
+        <image name="leftArrow" width="20" height="30"/>
+        <image name="portraitCross" width="540" height="256"/>
+        <image name="upArrow" width="30" height="20"/>
     </resources>
 </document>

@@ -10,8 +10,8 @@ import UIKit
 
 class LayoutView: UIView {
     
-    @IBOutlet private var image2: UIImageView!
-    @IBOutlet private var image4: UIImageView!
+    @IBOutlet private var rightTopLayoutImage: UIImageView!
+    @IBOutlet private var rightBottomLayoutImage: UIImageView!
     
     var style: Style = .layout2 {
         didSet {
@@ -22,14 +22,14 @@ class LayoutView: UIView {
         switch style {
             
         case .layout1:
-            image2.isHidden = true
-            image4.isHidden = false
+            rightTopLayoutImage.isHidden = true
+            rightBottomLayoutImage.isHidden = false
         case .layout2:
-            image2.isHidden = false
-            image4.isHidden = true
+            rightTopLayoutImage.isHidden = false
+            rightBottomLayoutImage.isHidden = true
         case .layout3:
-            image2.isHidden = false
-            image4.isHidden = false
+            rightTopLayoutImage.isHidden = false
+            rightBottomLayoutImage.isHidden = false
         }
     }
 

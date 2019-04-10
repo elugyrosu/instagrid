@@ -12,7 +12,9 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var layoutView: LayoutView!
     @IBOutlet var styleButtons: [UIButton]!
-    @IBOutlet var images: [UIImageView]!
+    
+    @IBOutlet var layoutViewImages: [UIImageView]!
+    var swipe: UISwipeGestureRecognizer?
 
     var tag: Int?
     let myArray: [Style] = [.layout1, .layout2, .layout3]
@@ -24,10 +26,11 @@ class ViewController: UIViewController {
         addGestureRecognizerToViewWithNotification()
         addGestureRecognizerToImages()
         shadowOnView()
+        swipe = UISwipeGestureRecognizer(target: self, action: #selector(swipeUpAnimation(gesture:)))
     }
     
     private func addGestureRecognizerToImages() {
-        images.forEach({$0.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(imageTapped(gesture:))))})
+        layoutViewImages.forEach({$0.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(imageTapped(gesture:))))})
     }
     @objc func imageTapped(gesture: UIGestureRecognizer){
         guard let tag = gesture.view?.tag else{return}
@@ -49,18 +52,26 @@ class ViewController: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(addGestureRecognizerToView), name: UIDevice.orientationDidChangeNotification, object: nil)
     }
     @objc func addGestureRecognizerToView(){
-        let swipe = UISwipeGestureRecognizer(target: self, action: #selector(swipeUpAnimation(gesture:)))
-        if UIApplication.shared.statusBarOrientation.isLandscape {
-            swipe.direction = .left
+        if UIDevice.current.orientation == .landscapeLeft || UIDevice.current.orientation == .landscapeRight {
+            swipe?.direction = .left
         } else {
-            swipe.direction = .up
+            swipe?.direction = .up
         }
+        guard let swipe = swipe else {return}
         layoutView.addGestureRecognizer(swipe)
     }
     @objc func swipeUpAnimation(gesture: UIGestureRecognizer) {
-//        let viewPosition = CGPoint(x: self.layoutView.frame.origin.x, y: self.layoutView.frame.origin.y - 600.0)
-//        layoutView.frame = CGRect(x: viewPosition.x, y: viewPosition.y, width: self.layoutView.frame.size.width, height: self.layoutView.frame.size.height)
-        UIView.animate(withDuration: 1.0, animations: transform)
+        UIView.animate(withDuration: 1.0,
+            animations:{
+                self.transform()
+            },
+            completion:{ _ in
+                UIView.animate(withDuration: 1.0) {
+                    self.layoutView.transform = .identity
+                }
+        })
+        
+
     }
     
     private func transform(){
@@ -70,7 +81,6 @@ class ViewController: UIViewController {
             layoutView.transform = CGAffineTransform(translationX: 0, y: -self.view.frame.height)
         }
     }
-    
     private func shadowOnView(){
         layoutView.layer.shadowColor = UIColor.black.cgColor
         layoutView.layer.shadowOpacity = 1
@@ -87,7 +97,7 @@ class ViewController: UIViewController {
         let vc = UIActivityViewController(activityItems: [image], applicationActivities: [])
             present(vc, animated: true)
         }
-
+    
     @IBAction func DidTapButton(_ sender: UIButton) {
         clearButtons()
         let tag = sender.tag
@@ -99,7 +109,6 @@ class ViewController: UIViewController {
             button.isSelected = false
         }
     }
-    
 }
 // MARK: - UIImagePickerController
 extension ViewController: UIImagePickerControllerDelegate,  UINavigationControllerDelegate {
@@ -108,7 +117,7 @@ extension ViewController: UIImagePickerControllerDelegate,  UINavigationControll
         if info[UIImagePickerController.InfoKey.originalImage] != nil {
             if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
                 guard let tag = tag else {return}
-                images[tag].image = image
+                layoutViewImages[tag].image = image
             }
         }
         dismiss(animated: true)
