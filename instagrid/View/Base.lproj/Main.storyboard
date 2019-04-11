@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait">
+    <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -20,11 +20,11 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="instagrid" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instagrid" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nn9-Zx-rPX" userLabel="InstagridLabel">
-                                <rect key="frame" x="148" y="54" width="118.5" height="39"/>
+                                <rect key="frame" x="128.5" y="30" width="118.5" height="39"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="36" id="Vc1-w1-agK"/>
                                 </constraints>
@@ -43,10 +43,10 @@
                                 </variation>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="3If-nx-aDR" userLabel="ButtonsStackView">
-                                <rect key="frame" x="45" y="741.5" width="324" height="95.5"/>
+                                <rect key="frame" x="45" y="559.5" width="285" height="82.5"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="id8-IM-SNi" userLabel="Button1">
-                                        <rect key="frame" x="0.0" y="0.0" width="95.5" height="95.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="82.5" height="82.5"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="id8-IM-SNi" secondAttribute="height" multiplier="1:1" id="1HN-Oq-yJf"/>
                                         </constraints>
@@ -59,7 +59,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="1" contentMode="scaleAspectFit" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NPk-19-cdK" userLabel="Button2">
-                                        <rect key="frame" x="114.5" y="0.0" width="95" height="95.5"/>
+                                        <rect key="frame" x="101.5" y="0.0" width="82" height="82.5"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="NPk-19-cdK" secondAttribute="height" multiplier="1:1" id="2XD-Nv-Cos"/>
                                         </constraints>
@@ -72,7 +72,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="2" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yZX-hE-dJd" userLabel="Button3">
-                                        <rect key="frame" x="228.5" y="0.0" width="95.5" height="95.5"/>
+                                        <rect key="frame" x="202.5" y="0.0" width="82.5" height="82.5"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="yZX-hE-dJd" secondAttribute="height" multiplier="1:1" id="ouz-tg-hKk"/>
                                         </constraints>
@@ -89,7 +89,7 @@
                                 <variation key="heightClass=compact-widthClass=regular" axis="vertical" spacing="18"/>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="nvb-Iw-Hca" userLabel="ShareStackView">
-                                <rect key="frame" x="124" y="209" width="166.5" height="53"/>
+                                <rect key="frame" x="104.5" y="114" width="166.5" height="53"/>
                                 <subviews>
                                     <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" insetsLayoutMarginsFromSafeArea="NO" image="upArrow" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vrr-ni-2sW">
                                         <rect key="frame" x="75.5" y="0.0" width="15" height="15"/>
@@ -138,36 +138,36 @@
                                 </subviews>
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Ec-bP-W5l" userLabel="Layout View" customClass="LayoutView" customModule="instagrid" customModuleProvider="target">
-                                <rect key="frame" x="36" y="277" width="342" height="342"/>
+                                <rect key="frame" x="36" y="182" width="303" height="303"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="O48-68-GUD" userLabel="Vertical Stack View">
-                                        <rect key="frame" x="15" y="15" width="312" height="312"/>
+                                        <rect key="frame" x="15" y="15" width="273" height="273"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="czi-WH-JPx" userLabel="TopStackView">
-                                                <rect key="frame" x="0.0" y="0.0" width="312" height="148.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="273" height="129"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" contentMode="scaleAspectFill" image="portraitCross" translatesAutoresizingMaskIntoConstraints="NO" id="83M-FY-VCf" userLabel="leftTopImageLayout">
-                                                        <rect key="frame" x="0.0" y="0.0" width="148.5" height="148.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="129" height="129"/>
                                                         <variation key="heightClass=compact-widthClass=compact" image="landscapeCross"/>
                                                         <variation key="heightClass=compact-widthClass=regular" image="landscapeCross"/>
                                                     </imageView>
                                                     <imageView clipsSubviews="YES" tag="1" contentMode="scaleAspectFill" image="portraitCross" translatesAutoresizingMaskIntoConstraints="NO" id="X8Y-v2-Bpw" userLabel="rightTopImageLayout">
-                                                        <rect key="frame" x="163.5" y="0.0" width="148.5" height="148.5"/>
+                                                        <rect key="frame" x="144" y="0.0" width="129" height="129"/>
                                                         <variation key="heightClass=compact-widthClass=compact" image="landscapeCross"/>
                                                         <variation key="heightClass=compact-widthClass=regular" image="landscapeCross"/>
                                                     </imageView>
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="I3K-Ka-SIb" userLabel="BottomStackView">
-                                                <rect key="frame" x="0.0" y="163.5" width="312" height="148.5"/>
+                                                <rect key="frame" x="0.0" y="144" width="273" height="129"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" tag="2" contentMode="scaleAspectFill" image="portraitCross" translatesAutoresizingMaskIntoConstraints="NO" id="Z8b-hP-zlo" userLabel="leftBottomLayoutImage">
-                                                        <rect key="frame" x="0.0" y="0.0" width="148.5" height="148.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="273" height="129"/>
                                                         <variation key="heightClass=compact-widthClass=compact" image="landscapeCross"/>
                                                         <variation key="heightClass=compact-widthClass=regular" image="landscapeCross"/>
                                                     </imageView>
-                                                    <imageView clipsSubviews="YES" tag="3" contentMode="scaleAspectFill" image="portraitCross" translatesAutoresizingMaskIntoConstraints="NO" id="Nwn-IM-GgV" userLabel="rightBottomLayoutImage">
-                                                        <rect key="frame" x="163.5" y="0.0" width="148.5" height="148.5"/>
+                                                    <imageView hidden="YES" clipsSubviews="YES" tag="3" contentMode="scaleAspectFill" image="portraitCross" translatesAutoresizingMaskIntoConstraints="NO" id="Nwn-IM-GgV" userLabel="rightBottomLayoutImage">
+                                                        <rect key="frame" x="0.0" y="0.0" width="0.0" height="129"/>
                                                         <variation key="heightClass=compact-widthClass=compact" image="landscapeCross"/>
                                                         <variation key="heightClass=compact-widthClass=regular" image="landscapeCross"/>
                                                     </imageView>
