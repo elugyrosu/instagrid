@@ -252,6 +252,7 @@
                     </view>
                     <connections>
                         <outlet property="layoutView" destination="4Ec-bP-W5l" id="2AU-CX-69f"/>
+                        <outlet property="shareStackView" destination="nvb-Iw-Hca" id="cBh-T8-169"/>
                         <outletCollection property="styleButtons" destination="id8-IM-SNi" collectionClass="NSMutableArray" id="tnM-Fe-wgA"/>
                         <outletCollection property="styleButtons" destination="NPk-19-cdK" collectionClass="NSMutableArray" id="wxZ-Wc-tOb"/>
                         <outletCollection property="styleButtons" destination="yZX-hE-dJd" collectionClass="NSMutableArray" id="o64-so-QfV"/>

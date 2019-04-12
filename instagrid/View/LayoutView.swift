@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LayoutView: UIView {
+class LayoutView: UIView {  // Layout depend of the isHidden property of 2 images
     
     @IBOutlet private var rightTopLayoutImage: UIImageView!
     @IBOutlet private var rightBottomLayoutImage: UIImageView!

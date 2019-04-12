@@ -6,7 +6,7 @@
 //  Copyright © 2019 Jordan MOREAU. All rights reserved.
 //
 
-import Foundation
+import Foundation // Model
 
 enum Style {
     case layout1, layout2, layout3
