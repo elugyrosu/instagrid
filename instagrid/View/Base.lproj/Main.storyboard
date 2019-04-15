@@ -162,12 +162,12 @@
                                                 <rect key="frame" x="0.0" y="144" width="273" height="129"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" tag="2" contentMode="scaleAspectFill" image="portraitCross" translatesAutoresizingMaskIntoConstraints="NO" id="Z8b-hP-zlo" userLabel="leftBottomLayoutImage">
-                                                        <rect key="frame" x="0.0" y="0.0" width="273" height="129"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="129" height="129"/>
                                                         <variation key="heightClass=compact-widthClass=compact" image="landscapeCross"/>
                                                         <variation key="heightClass=compact-widthClass=regular" image="landscapeCross"/>
                                                     </imageView>
-                                                    <imageView hidden="YES" clipsSubviews="YES" tag="3" contentMode="scaleAspectFill" image="portraitCross" translatesAutoresizingMaskIntoConstraints="NO" id="Nwn-IM-GgV" userLabel="rightBottomLayoutImage">
-                                                        <rect key="frame" x="0.0" y="0.0" width="0.0" height="129"/>
+                                                    <imageView clipsSubviews="YES" tag="3" contentMode="scaleAspectFill" image="portraitCross" translatesAutoresizingMaskIntoConstraints="NO" id="Nwn-IM-GgV" userLabel="rightBottomLayoutImage">
+                                                        <rect key="frame" x="144" y="0.0" width="129" height="129"/>
                                                         <variation key="heightClass=compact-widthClass=compact" image="landscapeCross"/>
                                                         <variation key="heightClass=compact-widthClass=regular" image="landscapeCross"/>
                                                     </imageView>

@@ -32,8 +32,5 @@ class LayoutView: UIView {  // Layout depend of the isHidden property of 2 image
             rightBottomLayoutImage.isHidden = false
         }
     }
-
-
-
 }
 

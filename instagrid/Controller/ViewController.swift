@@ -44,13 +44,13 @@ class ViewController: UIViewController {
     override func viewDidLoad() {  // start
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        shadowOnView()
+        layoutView.style = .layout2
         addGestureRecognizerToImages()
         shareSwipe = UISwipeGestureRecognizer(target: self, action: #selector(shareSwipeAnimation(gesture:)))   // One swipe action/animation = One swipe direction = One swipeGestureRecognizer
         lavanderSwipe = UISwipeGestureRecognizer(target: self, action: #selector(lavanderSwipeEffect(gesture:)))
         blueSwipe = UISwipeGestureRecognizer(target: self, action: #selector(blueSwipeEffect(gesture:)))
         oldYellowSwipe = UISwipeGestureRecognizer(target: self, action: #selector(oldYellowSwipeEffect(gesture:)))
-        changeSwipeDirectionGestureWithNotification()
+        changeSwipeDirectionWithNotification()
     }
     private func shadowOnView(){    // a simple shadow for layoutView
         layoutView.layer.shadowColor = UIColor.black.cgColor
@@ -81,10 +81,10 @@ class ViewController: UIViewController {
     
     // MARK: Swipes direction with orientation observer
     
-    private func changeSwipeDirectionGestureWithNotification() {    // Use device orientation observer with notifications
-        NotificationCenter.default.addObserver(self, selector: #selector(addGestureRecognizerToView), name: UIDevice.orientationDidChangeNotification, object: nil)
+    private func changeSwipeDirectionWithNotification() {    // Use device orientation observer with notifications
+        NotificationCenter.default.addObserver(self, selector: #selector(changeGestureDirection), name: UIDevice.orientationDidChangeNotification, object: nil)
     }
-    @objc func addGestureRecognizerToView(){    // modify direction for the four swipeGesture
+    @objc func changeGestureDirection(){    // modify direction for the four swipeGesture
         if UIDevice.current.orientation == .landscapeLeft || UIDevice.current.orientation == .landscapeRight {
             shareSwipe?.direction = .left
             lavanderSwipe?.direction = .down
@@ -129,7 +129,7 @@ class ViewController: UIViewController {
         }   // the layoutView respawn after share activity is complete/cancel
     }
     private func resetViews(){
-        UIView.animate(withDuration: 0, animations: {
+        UIView.animate(withDuration: 1, animations: {
             self.layoutView.transform = .identity
             self.shareStackView.isHidden = false
         })
