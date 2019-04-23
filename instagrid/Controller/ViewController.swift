@@ -81,30 +81,6 @@ class ViewController: UIViewController {
         }
     }
     
-    // MARK: Swipes direction with orientation observer
-    
-    private func changeSwipeDirectionWithNotification() {    // Use device orientation observer with notifications
-        NotificationCenter.default.addObserver(self, selector: #selector(changeGestureDirection), name: UIDevice.orientationDidChangeNotification, object: nil)
-    }
-    @objc func changeGestureDirection(){    // modify direction for the four swipeGesture
-        if UIDevice.current.orientation == .landscapeLeft || UIDevice.current.orientation == .landscapeRight {
-            shareSwipe?.direction = .left
-            lavanderSwipe?.direction = .down
-            blueSwipe?.direction = .right
-            oldYellowSwipe?.direction = .up
-        } else {
-            shareSwipe?.direction = .up
-            lavanderSwipe?.direction = .left
-            blueSwipe?.direction = .down
-            oldYellowSwipe?.direction = .right
-        }
-        guard let shareSwipe = shareSwipe, let whiteSwipe = lavanderSwipe, let blueSwipe = blueSwipe, let oldYellowSwipe = oldYellowSwipe  else {return}
-        layoutView.addGestureRecognizer(shareSwipe) // Apply all swipes to view
-        layoutView.addGestureRecognizer(whiteSwipe)
-        layoutView.addGestureRecognizer(blueSwipe)
-        layoutView.addGestureRecognizer(oldYellowSwipe)
-    }
-
     // MARK: Swipes action/animation
     
     @objc func shareSwipeAnimation(gesture: UIGestureRecognizer) {
@@ -136,15 +112,41 @@ class ViewController: UIViewController {
             self.shareStackView.isHidden = false
         })
     }
-    @objc func lavanderSwipeEffect(gesture: UIGestureRecognizer) {
+    @objc func lavanderSwipeEffect(gesture: UIGestureRecognizer) { // Bonus
         layoutView.backgroundColor = #colorLiteral(red: 0.8587709069, green: 0.8426139951, blue: 0.9519020915, alpha: 1)
     }
-    @objc func blueSwipeEffect(gesture: UIGestureRecognizer) {
+    @objc func blueSwipeEffect(gesture: UIGestureRecognizer) { // Bonus
         layoutView.backgroundColor = #colorLiteral(red: 0.1080091074, green: 0.3894751668, blue: 0.6092520952, alpha: 1)
     }
-    @objc func oldYellowSwipeEffect(gesture: UIGestureRecognizer) {
+    @objc func oldYellowSwipeEffect(gesture: UIGestureRecognizer) { // Bonus
         layoutView.backgroundColor = #colorLiteral(red: 0.9699423362, green: 0.9058819421, blue: 0.7772409532, alpha: 1)
     }
+
+    
+    // MARK: Swipes direction with orientation observer
+    
+    private func changeSwipeDirectionWithNotification() {    // Use device orientation observer with notifications
+        NotificationCenter.default.addObserver(self, selector: #selector(changeGestureDirection), name: UIDevice.orientationDidChangeNotification, object: nil)
+    }
+    @objc func changeGestureDirection(){    // modify direction for the four swipeGesture
+        if UIDevice.current.orientation == .landscapeLeft || UIDevice.current.orientation == .landscapeRight {
+            shareSwipe?.direction = .left
+            lavanderSwipe?.direction = .down // BONUS
+            blueSwipe?.direction = .right // BONUS
+            oldYellowSwipe?.direction = .up // BONUS
+        } else {
+            shareSwipe?.direction = .up
+            lavanderSwipe?.direction = .left // BONUS
+            blueSwipe?.direction = .down // BONUS
+            oldYellowSwipe?.direction = .right // BONUS
+        }
+        guard let shareSwipe = shareSwipe, let whiteSwipe = lavanderSwipe, let blueSwipe = blueSwipe, let oldYellowSwipe = oldYellowSwipe  else {return}
+        layoutView.addGestureRecognizer(shareSwipe) // Apply all swipes to view
+        layoutView.addGestureRecognizer(whiteSwipe) // BONUS
+        layoutView.addGestureRecognizer(blueSwipe) // BONUS
+        layoutView.addGestureRecognizer(oldYellowSwipe) // BONUS
+    }
+
 }
 
     // MARK: - UIImagePickerController
