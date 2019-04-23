@@ -14,7 +14,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var layoutView: LayoutView!
     @IBOutlet var styleButtons: [UIButton]!             // The three layout style buttons connected in order
-    @IBOutlet var layoutViewImages: [UIImageView]!      // The four layoutView images connected in order
+    @IBOutlet var layoutViewImages: [UIImageView]!  // The four layoutView images connected in order
     @IBOutlet weak var shareStackView: UIStackView!     // Label and arrow, to hide during swipe animation
     
     var shareSwipe: UISwipeGestureRecognizer?       // Swipe gesture for sharing layoutView

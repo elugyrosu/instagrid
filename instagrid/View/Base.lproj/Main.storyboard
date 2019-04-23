@@ -146,12 +146,12 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="czi-WH-JPx" userLabel="TopStackView">
                                                 <rect key="frame" x="0.0" y="0.0" width="273" height="129"/>
                                                 <subviews>
-                                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFill" image="portraitCross" translatesAutoresizingMaskIntoConstraints="NO" id="83M-FY-VCf" userLabel="leftTopImageLayout">
+                                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFill" image="portraitCross" translatesAutoresizingMaskIntoConstraints="NO" id="83M-FY-VCf" userLabel="leftTopLayoutImage">
                                                         <rect key="frame" x="0.0" y="0.0" width="129" height="129"/>
                                                         <variation key="heightClass=compact-widthClass=compact" image="landscapeCross"/>
                                                         <variation key="heightClass=compact-widthClass=regular" image="landscapeCross"/>
                                                     </imageView>
-                                                    <imageView clipsSubviews="YES" tag="1" contentMode="scaleAspectFill" image="portraitCross" translatesAutoresizingMaskIntoConstraints="NO" id="X8Y-v2-Bpw" userLabel="rightTopImageLayout">
+                                                    <imageView clipsSubviews="YES" tag="1" contentMode="scaleAspectFill" image="portraitCross" translatesAutoresizingMaskIntoConstraints="NO" id="X8Y-v2-Bpw" userLabel="rightTopLayoutImage">
                                                         <rect key="frame" x="144" y="0.0" width="129" height="129"/>
                                                         <variation key="heightClass=compact-widthClass=compact" image="landscapeCross"/>
                                                         <variation key="heightClass=compact-widthClass=regular" image="landscapeCross"/>
@@ -256,10 +256,10 @@
                         <outletCollection property="styleButtons" destination="id8-IM-SNi" collectionClass="NSMutableArray" id="tnM-Fe-wgA"/>
                         <outletCollection property="styleButtons" destination="NPk-19-cdK" collectionClass="NSMutableArray" id="wxZ-Wc-tOb"/>
                         <outletCollection property="styleButtons" destination="yZX-hE-dJd" collectionClass="NSMutableArray" id="o64-so-QfV"/>
-                        <outletCollection property="layoutViewImages" destination="83M-FY-VCf" collectionClass="NSMutableArray" id="KpM-qj-l1g"/>
-                        <outletCollection property="layoutViewImages" destination="X8Y-v2-Bpw" collectionClass="NSMutableArray" id="cHc-mB-8Fo"/>
-                        <outletCollection property="layoutViewImages" destination="Z8b-hP-zlo" collectionClass="NSMutableArray" id="AsB-dI-Apy"/>
-                        <outletCollection property="layoutViewImages" destination="Nwn-IM-GgV" collectionClass="NSMutableArray" id="jcb-TD-hwu"/>
+                        <outletCollection property="layoutViewImages" destination="83M-FY-VCf" collectionClass="NSMutableArray" id="y9Y-5i-PPz"/>
+                        <outletCollection property="layoutViewImages" destination="X8Y-v2-Bpw" collectionClass="NSMutableArray" id="PCT-UN-d9H"/>
+                        <outletCollection property="layoutViewImages" destination="Z8b-hP-zlo" collectionClass="NSMutableArray" id="gTa-Vz-AWP"/>
+                        <outletCollection property="layoutViewImages" destination="Nwn-IM-GgV" collectionClass="NSMutableArray" id="Rhf-kz-zUT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
