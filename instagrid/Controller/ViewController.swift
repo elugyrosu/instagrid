@@ -43,13 +43,15 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {  // start
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        shadowOnView()
         layoutView.style = .layout2
+        
         addGestureRecognizerToImages()
         shareSwipe = UISwipeGestureRecognizer(target: self, action: #selector(shareSwipeAnimation(gesture:)))   // One swipe action/animation = One swipe direction = One swipeGestureRecognizer
-        lavanderSwipe = UISwipeGestureRecognizer(target: self, action: #selector(lavanderSwipeEffect(gesture:)))
-        blueSwipe = UISwipeGestureRecognizer(target: self, action: #selector(blueSwipeEffect(gesture:)))
-        oldYellowSwipe = UISwipeGestureRecognizer(target: self, action: #selector(oldYellowSwipeEffect(gesture:)))
+        lavanderSwipe = UISwipeGestureRecognizer(target: self, action: #selector(lavanderSwipeEffect(gesture:))) // Bonus
+        blueSwipe = UISwipeGestureRecognizer(target: self, action: #selector(blueSwipeEffect(gesture:))) // Bonus
+        oldYellowSwipe = UISwipeGestureRecognizer(target: self, action: #selector(oldYellowSwipeEffect(gesture:))) // Bonus
+        
         changeSwipeDirectionWithNotification()
     }
     private func shadowOnView(){    // a simple shadow for layoutView
