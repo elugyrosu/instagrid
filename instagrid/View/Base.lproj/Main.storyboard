@@ -148,13 +148,9 @@
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" contentMode="scaleAspectFill" image="portraitCross" translatesAutoresizingMaskIntoConstraints="NO" id="83M-FY-VCf" userLabel="leftTopLayoutImage">
                                                         <rect key="frame" x="0.0" y="0.0" width="129" height="129"/>
-                                                        <variation key="heightClass=compact-widthClass=compact" image="landscapeCross"/>
-                                                        <variation key="heightClass=compact-widthClass=regular" image="landscapeCross"/>
                                                     </imageView>
                                                     <imageView clipsSubviews="YES" tag="1" contentMode="scaleAspectFill" image="portraitCross" translatesAutoresizingMaskIntoConstraints="NO" id="X8Y-v2-Bpw" userLabel="rightTopLayoutImage">
                                                         <rect key="frame" x="144" y="0.0" width="129" height="129"/>
-                                                        <variation key="heightClass=compact-widthClass=compact" image="landscapeCross"/>
-                                                        <variation key="heightClass=compact-widthClass=regular" image="landscapeCross"/>
                                                     </imageView>
                                                 </subviews>
                                             </stackView>
@@ -163,13 +159,9 @@
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" tag="2" contentMode="scaleAspectFill" image="portraitCross" translatesAutoresizingMaskIntoConstraints="NO" id="Z8b-hP-zlo" userLabel="leftBottomLayoutImage">
                                                         <rect key="frame" x="0.0" y="0.0" width="129" height="129"/>
-                                                        <variation key="heightClass=compact-widthClass=compact" image="landscapeCross"/>
-                                                        <variation key="heightClass=compact-widthClass=regular" image="landscapeCross"/>
                                                     </imageView>
                                                     <imageView clipsSubviews="YES" tag="3" contentMode="scaleAspectFill" image="portraitCross" translatesAutoresizingMaskIntoConstraints="NO" id="Nwn-IM-GgV" userLabel="rightBottomLayoutImage">
                                                         <rect key="frame" x="144" y="0.0" width="129" height="129"/>
-                                                        <variation key="heightClass=compact-widthClass=compact" image="landscapeCross"/>
-                                                        <variation key="heightClass=compact-widthClass=regular" image="landscapeCross"/>
                                                     </imageView>
                                                 </subviews>
                                             </stackView>
@@ -271,7 +263,6 @@
         <image name="Layout 1" width="160" height="160"/>
         <image name="Layout 2" width="160" height="160"/>
         <image name="Layout 3" width="160" height="160"/>
-        <image name="landscapeCross" width="540" height="256"/>
         <image name="layout1selected" width="160" height="160"/>
         <image name="layout2selected" width="160" height="160"/>
         <image name="layout3selected" width="160" height="160"/>
