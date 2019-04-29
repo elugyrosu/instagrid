@@ -76,6 +76,7 @@ class ViewController: UIViewController {
         if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) == true {   // check first, Only in photoLibrary
             imagePicker.allowsEditing = true
             imagePicker.delegate = self
+            imagePicker.modalPresentationStyle = .overCurrentContext // force landscape for image Picker Controller if Landscape orientation
             imagePicker.sourceType = .photoLibrary
             present(imagePicker, animated: true)
         }
@@ -146,7 +147,6 @@ class ViewController: UIViewController {
         layoutView.addGestureRecognizer(blueSwipe) // BONUS
         layoutView.addGestureRecognizer(oldYellowSwipe) // BONUS
     }
-
 }
 
     // MARK: - UIImagePickerController
