@@ -15,7 +15,7 @@ Ajout du Swipe dans les 4 directions pour changer la couleur du cadre.
 Instagrid a été écrit sous Xcode en Swift 5 selon le pattern de conception MVC et supporte les iPhones en mode portrait à partir de iOS11
 
 - Design à partir du mockup (Sketch) d'OpenClassrooms.com
-- Autolayout, SwipeGestureRecognizer, NotificationCenter, ImagePickerController, Tag & Tap...
+- Autolayout, SwipeGestureRecognizer, TapGestureRecognizer, NotificationCenter, ImagePickerController, CoreAnimation
 
 ## Installation
 
